@@ -9,7 +9,7 @@ public class GravaJson {
 
     public void gravaJson(Endereco endereco) throws IOException {
 
-        FileWriter escrita = new FileWriter("enderecos.json");
+        FileWriter escrita = new FileWriter(endereco.cep()+".json");
         escrita.write(gson.toJson(endereco));
         escrita.close();
 
